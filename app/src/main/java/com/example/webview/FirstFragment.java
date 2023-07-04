@@ -65,7 +65,8 @@ public class FirstFragment extends Fragment {
         binding = FragmentFirstBinding.inflate(getLayoutInflater(), container, false);
         binding.buttonUrl.setOnClickListener(v -> {
             String url = binding.editTextUrl.getText().toString();
-            getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, SecondFragment.newInstance(url, ""), "").commit();
+            getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView,
+                    SecondFragment.newInstance(url, ""), "").commit();
         });
         return binding.getRoot();
 
